@@ -70,13 +70,13 @@
 Если необходимо убрать символы только слева или только справа, 
 можно использовать, соответственно, методы lstrip() и rstrip().
 """
-# string7 = '\n\tinterface FastEthernet1\n'
-# string7 = string7.strip()
-# print(string7)
+string7 = '\n\tinterface FastEthernet1\n'
+string7 = string7.strip()
+print(string7)
 
-# string7 = '[110/1045'
-# string7 = string7.strip('[]')
-# print(string7)
+string7 = '[110/1045'
+string7 = string7.strip('[]')
+print(string7)
 
 """Метод Split
 Метод split() разбивает строку на части, используя как разделитель 
@@ -97,9 +97,9 @@
 # sh_ip_int_e_s.split()
 # print(sh_ip_int_e_s)
 
-sh_ip_int_e_s = (' ')
-sh_ip_int_e_s.split()
-print(sh_ip_int_e_s)
+# sh_ip_int_e_s = (' ')
+# sh_ip_int_e_s.split()
+# print(sh_ip_int_e_s)
 
 
 

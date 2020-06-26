@@ -69,3 +69,16 @@ git status
 git push origin master
 
 git pull (Скачивает с github)
+
+-----------------------------
+git status
+git add .
+git status
+git commit -m "Add test"
+git status
+git push origin master (Закачка на github)
+user: SMurad85
+Pass: 800800...
+git status
+
+git pull (Скачивает с github)
