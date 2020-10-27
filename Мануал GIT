@@ -1,4 +1,4 @@
-sudo add-apt-repository ppa: geany-dev / ppa
+sudo add-apt-repository ppa:geany-dev/ppa
 
 sudo apt-get install geany
 
