@@ -1,35 +1,4 @@
-sudo add-apt-repository ppa:geany-dev/ppa
 
-sudo apt-get install geany
-
-sudo apt install git
-
-
-git config --list (user проверка)
-git config --global user.name pyneng (настройка user)
-git config --global user.email "smuradm85@gmail.com (настройка user email)
-
-mkdir my_repo
-cd my_repo (переход в рипитизорию)
-git init
-
-
-vi README.md
-git status
-
-vi gitignore
-git status
-
-git add .
-git status
-.
-git rm --cached .gitignore.un~ README.md 
-git commit -m "Add test"
-git status
-
-git reset HEAD
-
-git diff
 ------------------------------
 Аутентификация на Гид Хаб
 
@@ -42,6 +11,28 @@ eval "$(ssh-agent -s)"
 Добавить ключ в SSH-агент:
 ssh-add ~/.ssh/id_rsa
 
+Добавление SSH-ключа на GitHub
+========================================
+sudo apt install git (установка git)
+
+git config --list (user проверка)
+git config --global user.name pyneng (настройка user)
+git config --global user.email "smuradm85@gmail.com (настройка user email)
+
+mkdir PYEG (создаем рипитизорию)
+
+cd PYEG (переход в рипитизорию)
+git init
+-------------------------
+Аутентификация на Гид Хаб
+Генерация нового SSH-ключа (используйте e-mail, который привязан к ГидХаб)
+ssh-keygen -t rsa -b 4096 -C "github_smuradm85@gmail.com
+
+Запуск SSH-агента:
+eval "$(ssh-agent -s)"
+
+Добавить ключ в SSH-агент:
+ssh-add ~/.ssh/id_rsa
 
 Добавление SSH-ключа на GitHub
 
@@ -50,10 +41,35 @@ cat ~/.ssh/id_rsa.pub
 
 Чтобы проверить, всё ли прошло успешно, попробуйте выполнить команду 
 ssh -T git@github.com.
-
-
 Теперь вы готовы работать с Git и GitHub.
+----------------------------
+git clone git@github.com:SMurad85/PYEG.git (Клонировать с гидхаба)
 
+git status
+git add .
+git status
+git commit -m "Add test"
+git status
+git push origin master (Закачка на github)
+user: SMurad85
+Pass: 800800...
+git status
+
+git pull (Скачивает с github)
+=========================================
+Аутентификация на Гид Хаб
+Генерация нового SSH-ключа (используйте e-mail, который привязан к ГидХаб)
+ssh-keygen -t rsa -b 4096 -C "github_smuradm85@gmail.com
+Запуск SSH-агента:
+eval "$(ssh-agent -s)"
+Добавить ключ в SSH-агент:
+ssh-add ~/.ssh/id_rsa
+Добавление SSH-ключа на GitHub
+Например, таким образом можно отобразить ключ для копирования:
+cat ~/.ssh/id_rsa.pub
+Чтобы проверить, всё ли прошло успешно, попробуйте выполнить команду 
+ssh -T git@github.com.
+Теперь вы готовы работать с Git и GitHub.
 
 git add README.md
 git commit -m "first commit"
@@ -64,12 +80,12 @@ Pass: 800800...
 cd PYEG
 git remote -v
 
-
 git status
-git push origin master
+git add .
+git status
+git push origin master (Закачка на github)
 
-git pull (Скачивает с github)
-
+git pull (Скачать с github)
 -----------------------------
 git status
 git add .
@@ -82,3 +98,8 @@ Pass: 800800...
 git status
 
 git pull (Скачивает с github)
+
+
+
+
+
